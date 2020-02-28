@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+
+.characters {
+  margin-left: 310px;
+}
+
+/*The baground selector image which indicates that we have selected a particular character*/
+.characters .char.active {
+  background: url(../images/Selector.png);
+}
+
+ul {
+  margin-bottom: -30px;
+}
+
+/*dimensions*/
+ul li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width:320px) and (max-width:500px) {}

@@ -1,0 +1,213 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff url('../img/geometry2.png');
+  /* Background pattern from Subtle Patterns */
+  font-family: 'Coda', cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.deck {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #2e3d49;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+/*to disable multiclick on cards  */
+.Xmulticlick {
+  pointer-events: none;
+}
+
+/*The modal box  */
+.congrats {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.congrats:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Dimensions regarding the popup */
+.popup {
+  margin: 80px auto;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 60%;
+  position: relative;
+}
+
+/* styles for the heading text of popup */
+.popup h2 {
+  margin-top: 0;
+  color: #oooooo;
+  text-align: center;
+  font-style: italic;
+  font-family: cursive;
+}
+
+/*Visible text size  */
+.text {
+  font-size: 30px;
+}
+
+/* close the modal box */
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.popup .close:hover {
+  color: #E5F720;
+}
+
+/*Constraints for popup  */
+.popup .message, .message1 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+
+/*Styles for Playagain button  */
+#PlayAgain {
+  background-color: #141214;
+  color: #ffffff;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+/*To display star rating */
+#starRating li {
+  display: inline-block;
+}
+
+.show {
+  visibility: visible;
+  opacity: 100;
+}
+
+/* Respionsive Designing */
+@media screen and (min-width:320px) and (max-width:500px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .deck {
+    width: 300px;
+    min-height: 320px;
+  }
+
+  .deck .card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .score-panel {
+    width: 80%;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}
