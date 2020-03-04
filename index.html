@@ -1,113 +1,326 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="app.css">
-    <title>GameGround</title>
-  <meta name="description" content="GameGround">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="manifest" href="manifest.json">
-  </head>
+<html >
+    <head>
+        <meta  charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JuegosBox</title>
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="shortcut icon" href="icon1.jpg" type="image/x-icon">
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+    </head>
+    <style>
+        .fixed-nav {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #1da1f2;
+        }
+  
+        .padding-top-form {
+          padding-top: 1rem;
+        }
+        .modal ,.modal2{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  .modal-content ,.modal-content2{
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+    
+  }
+  
+  .close,.close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus,.close2:hover,
+  .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header,.modal-header2 {
+    padding: 2px 16px;
+    background-color:#1da1f2;
+    color: white;
+    
+  }
+  
+  .modal-body,.modal-body2 {
+    
+    padding: 2px 16px;}
+  
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+      </style>
+    <body >
+       <div class="container">
+           <div class="left-box">
+               
+                <ul>
+                    <h1 style="margin-top: -5%;color:black;text-shadow: 2px 2px 8px #fff;font-size:50px">  Juegos Box</h1>
+                    <li>
+               
+                        <i class="fas fa-search icon"></i>
+                        Follow your interests. 
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;
+                        A play visibly represents pure existing.
+                    </li>
+                    <li>
+                        <i class="far fa-comment icon"></i>
+                        Join the conversation. To play a good game, you need a few players.
+                    </li>
+                </ul>
+           </div>
+           <div class="right-box">
+               
+                <div class="card">
+                    <form style="margin-top: -100px;" >
+                        <input type="text" placeholder="Phone, email,or username" style="padding: 12px;">&nbsp;&nbsp;
+                        <input type="password" placeholder="Password" style="padding: 12px;">&nbsp;&nbsp;
+                        <!-- <input type="button" id="bt"
+                         value="Log in" > -->
+                         <button type="button" name="button" class="col s12  btn primary block" id="myBtn" style="width: 100;margin-left: -5;" >
+                            <a style="color:white" href="index1.html" data-target="xyz" >Login</a></button>
+                         <!-- <button class="btn primary block"  style="width: 100;margin-left: -5;" onclick="document.getElementById('id01').style.display='block'">Log In</button> -->
+                         
+                    </form>
+                    <br><br><br><br><br>
+                    
+                    <div class="head" >
+                        
+                        <!-- <i class="fab fa-twitter logo-icon" style="margin-left: 5rem;"></i> -->
+                        <img src="icon1.jpg" width="50" style="margin-left: 5rem;">
+                        
+                    </div>
+                    <h1 style="margin-left: 5rem;">It is in games that people <br/>discover their paradise.</h1>
+                    <p style="margin-left: 5rem;">Join Juegos Box today.</p>
+                    
+                    <!-- <button class="btn primary block">Sign Up</button> -->
+                    
+                        
+                          
+                            <button type="button" name="button" class="col s12  btn primary block" id="myBtn2" >
+                        <a style="color:white" href="#" data-target="organList">Sign Up</a></button>
+                     
+                    
+                        
+                </div>
+           </div>
+           <div class="bottom-box">
+                <ul>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Status</a>
+                    </li>
+                    <li>
+                        <a href="#">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="#">Ads info</a>
+                    </li>
+                    <li>
+                        <a href="#">Brand</a>
+                    </li>
+                    <li>
+                        <a href="#">Apps</a>
+                    </li>
+                    <li>
+                        <a href="#">Advertise</a>
+                    </li>
+                    <li>
+                        <a href="#">Marketing</a>
+                    </li>
+                    <li>
+                        <a href="#">Businesses</a>
+                    </li>
+                    <li>
+                        <a href="#">Developers</a>
+                    </li>
+                    <li>
+                        <a href="#">Directory</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">&copy; 2020 JuegosBox</a>
+                    </li>
+                </ul>
+           </div>
+       </div> 
+       
+       <div id="myModal" class="modal">
 
-// Next/previous controls
-function plusSlides(n) {
-showSlides(slideIndex += n);
-document.querySelector('p').className='p1';
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-var i;
-var slides;
-slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
-
-</script>
-  <body>
-    <header>
-      Juegos Box
-    </header>
-    <!-- <div class="topdiv">
-     <img src="ballbounce.jpg" alt="">
-     <img src="memorygame.jpg" alt="">
-     <img src="ball2bounce.jpg" alt="">
-    </div> -->
-    <!-- Full-width images with number and caption text -->
-    <p>Click Left or Right to Select Game</p>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/typer.jpg" >
-
-      <a style="text-decoration:none;" href="./typer/typer.html" target="_self"> <h1 class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1></a>
-
-    </div>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/arcade.jpg" >
-
-      <a  style="text-decoration:none;" href="./Arcade/index.html" target="_self"><h1 class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1> </a>
-
-    </div>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/2048.jpg" >
-      <a  style="text-decoration:none;" href="./2048/index.html" target="_self"><h1 class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1></a>
-
-    </div>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/memory.jpg" >
-      <a  style="text-decoration:none;" href="./Memory/index.html" target="_self"><h1 class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1></a>
-
-    </div>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/hextris.jpg" >
-      <a  style="text-decoration:none;"href="./hextris/index.html" target="_self"><h1  class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1></a>
-    </div>
-    <div class="mySlides c1 fade">
-
-      <img src="./img/chess.jpg" >
-      <a  style="text-decoration:none;"href="./chess/index.html" target="_self"><h1 class="btn" align:center ><i class="fa fa-play"></i> Play Now!</h1></a>
-    </div>
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h3 align="center">LOGIN</h3>
+          </div>
+          <div class="modal-body" style="padding-bottom: 40px;" >
+            <form style="width: 300px;margin: 0 auto; " action="index1.html" method="get">
+                <table>
+                 
+                 <tr>
+                  <td style="font-size: 20px;">Email :</td> <td><input type="text" name="email" placeholder="enter username/email"></td><br>
+                 </tr>
+                 
+                 <tr>
+                  <td style="font-size: 20px;">Password :</td> <td><input type="password" name="pwd" placeholder="enter password"></td><br>
+                 </tr>
+                 
+                  <td><input type="submit" value="Submit" style="margin-left: 90%;"> </td>
+                 </tr>
+                </table>
+               </form>
+      
+          </div>
+      
         </div>
-
+      
       </div>
+      <div id="myModal2" class="modal2">
 
-    <!-- <div class="bottomdiv">
-      <button class="button" type="button" name="button" >Play</button>
-    </div> -->
-  </body>
+        <div class="modal-content2">
+          <div class="modal-header2">
+            <span class="close2">&times;</span>
+            <h3 align="center">SIGN UP</h3>
+          </div>
+          <div class="modal-body2" style="padding-bottom: 40px;">
+            <form style="width: 500px; margin: 0 auto;">
+                <table>
+                 <tr>
+                  <td style="font-size: 20px;">Name :</td> <td><input type="text" name="name" placeholder="enter name" value="enter name"></td><br>
+                 </tr>
+                 <tr>
+                  <td style="font-size: 20px;">Email :</td> <td><input type="text" name="email" placeholder="enter email" value="enter email"></td><br>
+                 </tr>
+                 <tr>
+                  <td style="font-size: 20px;">Password :</td> <td><input type="password" name="pwd" placeholder="enter password"></td><br>
+                 </tr>
+                 <tr>
+                  <td style="font-size: 20px;">Confirm Password :</td> <td><input type="password" name="cpwd" placeholder="re-enter password"><br>
+                 </tr>
+                 
+                 <tr>
+                     
+                  <td><input type="submit" value="Submit" style="margin-left: 90%;"></td>
+                 </tr>
+                </table>
+               </form>
+      
+          </div>
+      
+        </div>
+      
+      </div>
+      
+      </script>
+          <script>
+      var modal = document.getElementById("myModal");
+      
+      var btn = document.getElementById("myBtn");
+      
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+      <script>
+        var modal2 = document.getElementById("myModal2");
+        
+        var btn2 = document.getElementById("myBtn2");
+        
+        var span2 = document.getElementsByClassName("close2")[0];
+        
+        btn2.onclick = function() {
+        modal2.style.display = "block";
+        }
+        
+        span2.onclick = function() {
+        modal2.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+        if (event.target == modal2) {
+        modal2.style.display = "none";
+        }
+        }
+        </script>
+    </body>
 </html>
